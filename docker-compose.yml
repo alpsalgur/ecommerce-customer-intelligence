@@ -1,0 +1,11 @@
+version: "3.9"
+
+services:
+  intelligence-dashboard:
+    build: .
+    container_name: ecommerce_intelligence_app
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./data:/app/data
+    restart: unless-stopped
